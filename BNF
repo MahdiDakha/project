@@ -1,0 +1,45 @@
+
+<statement> ::= <func_def>
+              | <lambda_def>
+              | <expr>
+
+<func_def> ::= "func" <identifier> "(" <parameter_list> ")" "->" <expr>
+
+<lambda_def> ::= <identifier> "=" "lambda" <lambda_parameters> "->" <expr>
+
+<lambda_parameters> ::= "(" <parameter_list> ")" | "->"
+
+<parameter_list> ::= <identifier> | <identifier> "," <parameter_list>
+
+<expr> ::= <if_expr>
+         | <logic_expr>
+
+<if_expr> ::= "if" <logic_expr> "do" <expr> "else" <expr>
+
+<logic_expr> ::= <comp_expr>
+               | <logic_expr> "and" <logic_expr>
+               | <logic_expr> "or" <logic_expr>
+
+<comp_expr> ::= <arith_expr> <comp_op> <arith_expr>
+
+<comp_op> ::= "==" | "!=" | ">" | ">=" | "<" | "<="
+
+<arith_expr> ::= <term> | <arith_expr> "+" <term> | <arith_expr> "-" <term>
+
+<term> ::= <factor> | <term> "*" <factor> | <term> "/" <factor>
+
+<factor> ::= <unary_op> <factor> | <call> | <number> | <identifier> | "(" <expr> ")"
+
+<call> ::= <identifier> "(" <argument_list> ")"
+
+<argument_list> ::= <expr> | <expr> "," <argument_list>
+
+<unary_op> ::= "-" | "+"
+
+<identifier> ::= <letter> {<letter> | <digit> | "_"}
+
+<number> ::= <digit> {<digit>}
+
+<letter> ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+
+<digit> ::= "0" | "1" | ... | "9"
