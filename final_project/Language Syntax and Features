@@ -1,0 +1,97 @@
+My functional programming language supports a variety of features including function definitions,
+lambda expressions, recursion, logical operations, arithmetic operations,
+ and conditional expressions. It is designed with an emphasis on immutability
+ ,avoiding the use of variables outside of function parameters and return values.
+
+
+
+functions:
+ Functions are defined using the 'func' keyword followed by the function name,
+ parameters in parentheses,
+ and an expression that represents the function bod
+
+ the syntax:
+ func functionName(parameter1, parameter2, ...) -> expression
+
+ example:
+ func add(x, y) -> x + y
+
+
+Function Call:
+Functions are called by their name followed by arguments in parentheses.
+
+Syntax:
+functionName(arg1, arg2, ...)
+
+Exampe:
+add(3, 5)
+
+The favorite one lambda:
+Lambda expressions are anonymous functions defined using the 'lambda'
+keyword followed by the parameters,
+the arrow '->', and the expression.
+ Lambdas can be assigned to variables for reuse.
+
+ Syntax:
+ lambda x, y -> expression
+
+ Example:
+ add = lambda x, y -> x + y
+
+
+ Lambda Call:
+ Similar to function calls, lambda expressions are called using parentheses.
+
+ For example:
+ add(2, 3)
+
+
+ Recursion:
+ Functions can be recursive,
+  allowing them to call themselves within their definition.
+
+ Example:
+ func factorial(n) -> if n == 0 do 1 else n * factorial(n - 1)
+
+Conditional Expressions:
+Conditional expressions use the if...do...else syntax
+to evaluate conditions and return values based on the condition's truth value.
+
+Syntax:
+if condition do expr1 else expr2
+
+Example:
+if 1 == 1 do 4 else 7
+
+
+Logical Operations:
+The language supports logical operations 'and', 'or', and 'not' within expressions
+
+example:
+if x > 0 and y > 0 do 1 else 0
+
+
+Arithmetic Operations:
+Basic arithmetic operations (+, -, *, /,%) are supported.
+Example:
+5 * (2 + 3)
+
+Comparison Operations:
+The language supports comparison operators such as ==, !=, <, >, <=, >=.
+
+Example:
+if x >= 10 do true else false
+
+
+
+
+Special Features:
+
+Immutability: Variables or functions once defined cannot be reassigned.
+ The language enforces immutability to ensure functional purity
+ .
+No Variable Declarations: There is no concept of variable assignment outside of function parameters and return values.
+ Functions and lambdas are first-class citizens.
+
+Recursion Support: Functions can call themselves recursively
+, enabling complex operations like factorial or Fibonacci sequence calculations.

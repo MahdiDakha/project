@@ -1,0 +1,51 @@
+func factorial(n) -> if n == 0 do 1 else n * factorial(n - 1)
+add = lambda x, y -> x + y
+subtract = lambda x, y -> x - y
+multiply = lambda x, y -> x * y
+divide = lambda x, y -> x / y
+func is_even(n) -> if n % 2 == 0 do true else false
+factorial(5)
+add(3, 7)
+subtract(10, 4)
+multiply(3, 5)
+divide(20, 4)
+if 1 == 1 and 2 == 2 do 4 else 7
+if 3 == 3 or 1 == 2 do 10 else 20
+if 1 != 1 do 0 else 1
+if is_even(4) do factorial(3) else factorial(4)
+noop = lambda -> 0
+noop()
+func complex(a, b, c) -> a * b + c
+complex(2, 3, 4)
+add(add(1, 2), subtract(10, 5))
+factorial(10)
+func all_true(x, y) -> x and y
+all_true(true, false)
+max = lambda a, b -> if a > b do a else b
+max(7, 10)
+greater_than = lambda x, y -> x > y
+greater_than(10, 5)
+greater_than(2, 7)
+func min(x, y) -> if x < y do x else y
+min(8, 3)
+min(12, 15)
+func nested(x) -> add(subtract(x, 2), multiply(x, 3))
+nested(4)
+func fib(n) -> if n == 0 do 0 else if n == 1 do 1 else fib(n - 1) + fib(n - 2)
+fib(6)
+fib(10)
+if 5 * 5 == 25 do 100 else 200
+if 7 + 3 == 11 do 50 else 75
+if is_even(10) and greater_than(10, 5) do 1 else 0
+if is_even(9) or greater_than(2, 10) do 1 else 0
+func sum_of_squares(x, y) -> add(multiply(x, x), multiply(y, y))
+sum_of_squares(3, 4)
+abs = lambda x -> if x >= 0 do x else 2*x
+abs(5)
+abs(8)
+func triple_add(x, y, z) -> add(add(x, y), z)
+triple_add(1, 2, 3)
+func pow2(x) -> multiply(x, x)
+pow2(5)
+pow2(8)
+factorial(12)
